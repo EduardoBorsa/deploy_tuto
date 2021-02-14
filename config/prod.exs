@@ -15,6 +15,6 @@ config :deploy_tuto, DeployTutoWeb.Endpoint,
   server: true,
   secret_key_base: secret_key_base,
   http: [
-    port: String.to_integer(System.get_env("PORT")),
+    port: 4000,
     transport_options: [socket_opts: [:inet6]]
   ]
