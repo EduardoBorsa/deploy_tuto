@@ -8,7 +8,7 @@ use Mix.Config
 config :deploy_tuto, DeployTuto.Repo,
   username: "postgres",
   password: "postgres",
-  database: "deploy_tuto_test#{System.get_env("MIX_TEST_PARTITION")}",
+  database: "deploy_tuto_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
