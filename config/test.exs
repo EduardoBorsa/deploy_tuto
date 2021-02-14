@@ -12,6 +12,10 @@ config :deploy_tuto, DeployTuto.Repo,
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
 
+if System.get_env("CI") do
+  import_config "test.secret.exs"
+end
+
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :deploy_tuto, DeployTutoWeb.Endpoint,
